@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Najath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <style>
+        #modal {
+            display: none;
+        }
+        #modal-img {
+            transition: transform 0.3s ease;
+        }
+        #modal.show #modal-img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="text-white bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
+    <div class="flex flex-col min-h-screen gap-10 px-6 py-3 md:px-10 lg:px-16 lg:py-7">
+        <header class="flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <h1 class="text-3xl font-bold">Najath.</h1>
+            </a>
+            <nav>
+                <ul id="nav-menu" class="items-center hidden gap-10 text-lg font-medium lg:flex lg:items-center">
+                    <li><a href="index.html" class="Home">Home</a></li>
+                    <li><a href="projects.html" class="Projects">Projects</a></li>
+                    <li><a href="resume.html" class="Resume">Resume</a></li>
+                    <li><a href="contact.html" class="Contact">Contact</a></li>
+                </ul>
+                <div class="lg:hidden">
+                    <i id="menu-toggle" class="cursor-pointer fa-solid fa-bars fa-2x"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-transform">Resume</h1>
+                <p class="mt-5 text-transform">Here is a summary of my education and experience.</p>
+                
+                <!-- Education Section -->
+                <section class="mt-10 text-transform">
+                    <h2 class="text-3xl font-bold text-green-400">Education</h2>
+                    <div class="mt-5 space-y-4 education-section">
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Higher National Diploma in Computing</h3>
+                            <p class="mt-2">2023 — 2024</p>
+                            <p class="mt-2">I have Successfully Completed the Pearson BTEC Level 5 HND in Computing (Software Engineering).</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Aquinas College, Colombo</h3>
+                            <p class="mt-2">2022</p>
+                            <p class="mt-2">I have Successfully Completed the Diploma in English Language (Level II) Course.</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Advanced Level</h3>
+                            <p class="mt-2">2019 — 2021</p>
+                            <p class="mt-2">I have Completed my Advance level in Engineering technology stream at Kekunagolla National School.</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">UX Design - R</h3>
+                            <p class="mt-2">2024</p>
+                            <p class="mt-2">Currently I'm pursuing a Google offered UX Design course through Coursera.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certificates Section -->
+                <section class="mt-10 text-transform">
+                    <h2 class="text-3xl font-bold text-blue-400">Certificates</h2>
+                    <div class="grid gap-4 mt-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 certificate-section">
+                        <div class="p-4 bg-gray-800 rounded-lg certificate-card" onclick="openModal('assets/C-Image-1.jpg')">
+                            <h3 class="text-xl font-bold">Managing the Company of the Future</h3>
+                            <p class="mt-2">University of London and London Business School and offered through Coursera - 2023</p>
+                            <img src="assets/C-Image-1.jpg" alt="Certified by Coursera" class="mt-2 rounded-md cursor-pointer"/>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg certificate-card" onclick="openModal('assets/C-Image-2.jpg')">
+                            <h3 class="text-xl font-bold">Agile Leadership: Introduction to Change</h3>
+                            <p class="mt-2">University of Colorado System and offered through Coursera - 2023</p>
+                            <img src="assets/C-Image-2.jpg" alt="Certified by Coursera" class="mt-2 rounded-md cursor-pointer"/>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg certificate-card" onclick="openModal('assets/C-Image-3.jpg')">
+                            <h3 class="text-xl font-bold">Office Application Course</h3>
+                            <p class="mt-2">By Ministry of Education & Zonal Education Office - Kegalle - 2019</p>
+                            <img src="assets/C-Image-3.jpg" alt="Zonal Education Office - Kegalle" class="mt-2 rounded-md cursor-pointer"/>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg certificate-card" onclick="openModal('assets/C-Image-4.jpg')">
+                            <h3 class="text-xl font-bold">Office Application Course</h3>
+                            <p class="mt-2">2019</p>
+                            <p class="mt-2">By Ministry of Education & Zonal Education Office - Kegalle</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg certificate-card" onclick="openModal('assets/C-Image-5.jpg')">
+                            <h3 class="text-xl font-bold">Agile Leadership: Introduction to Change</h3>
+                            <p class="mt-2">2023</p>
+                            <p class="mt-2">University of Colorado System and offered through Coursera</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg certificate-card" onclick="openModal('assets/C-Image-6.jpg')">
+                            <h3 class="text-xl font-bold">Managing the Company of the Future</h3>
+                            <p class="mt-2">2023</p>
+                            <p class="mt-2">University of London and London Business School and offered through Coursera</p>
+                        </div>
+                        <!-- Add more certificate items here -->
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="mt-10 text-transform">
+                    <h2 class="text-3xl font-bold text-purple-400">My Skills</h2>
+                    <div class="mt-5 space-y-4 skills-section">
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Programming Languages</h3>
+                            <p class="mt-2">JavaScript, Python, C#, php</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Frameworks and Libraries</h3>
+                            <p class="mt-2">React, Node.js</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Database</h3>
+                            <p class="mt-2">MySQL</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <h3 class="text-xl font-bold">Tools and Technologies</h3>
+                            <p class="mt-2">Git</p>
+                        </div>
+                        <!-- Add more skill items here -->
+                    </div>
+                </section>
+
+                <!-- Download Button -->
+                <div class="mt-10 text-transform download-section">
+                    <button id="download-btn" class="px-6 py-3 font-medium text-white transition-colors bg-green-400 rounded-md hover:bg-green-500">Download Resume</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-75">
+        <span id="close-modal" class="absolute text-3xl text-white cursor-pointer top-5 right-5">&times;</span>
+        <img id="modal-img" class="max-w-full max-h-full">
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+        });
+
+        document.getElementById('download-btn').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'assets/Najath_Mohomed_CV-1.pdf';
+            link.download = 'Resume.pdf';
+            link.click();
+        });
+
+        function openModal(imageSrc) {
+            var modal = document.getElementById('modal');
+            var modalImg = document.getElementById('modal-img');
+            modalImg.src = imageSrc;
+            modal.classList.add('show');
+            modal.style.display = 'flex';
+        }
+
+        document.getElementById('close-modal').addEventListener('click', function() {
+            var modal = document.getElementById('modal');
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+        });
+
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.education-section', {
+            duration: 1000,
+            distance: '50px',
+            origin: 'left',
+            easing: 'ease-in-out'
+        });
+
+        ScrollReveal().reveal('.certificate-section', {
+            duration: 1000,
+            scale: 0.8,
+            distance: '20px',
+            origin: 'bottom',
+            easing: 'ease-in-out'
+        });
+
+        ScrollReveal().reveal('.skills-section', {
+            duration: 1000,
+            distance: '50px',
+            origin: 'right',
+            easing: 'ease-in-out'
+        });
+
+        ScrollReveal().reveal('.download-section', {
+            duration: 1000,
+            distance: '20px',
+            origin: 'bottom',
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Najath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body class="text-white bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
+    <div class="flex flex-col min-h-screen gap-10 px-6 py-3 md:px-10 lg:px-16 lg:py-7">
+        <header class="flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <h1 class="text-3xl font-bold">Najath.</h1>
+            </a>
+            <nav>
+                <ul id="nav-menu" class="items-center hidden gap-10 text-lg font-medium lg:flex lg:items-center">
+                    <li><a href="index.html" class="Home">Home</a></li>
+                    <li><a href="projects.html" class="Projects">Projects</a></li>
+                    <li><a href="resume.html" class="Resume">Resume</a></li>
+                    <li><a href="contact.html" class="Contact">Contact</a></li>
+                </ul>
+                <div class="lg:hidden">
+                    <i id="menu-toggle" class="cursor-pointer fa-solid fa-bars fa-2x"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-transform">Contact Me</h1>
+                <p class="mt-5 text-transform">I'd love to hear from you! Reach out using the form below.</p>
+                
+                <!-- Contact Information -->
+                <div class="mt-10 contact-info">
+                    <p class="text-xl font-bold">Contact Information</p>
+                    <div class="flex flex-col items-center gap-4 mt-4">
+                        <div class="flex items-center gap-2">
+                            <i class="text-green-400 fa-solid fa-phone"></i>
+                            <p class="text-lg">+94 773 378 718</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <i class="text-green-400 fa-solid fa-envelope"></i>
+                            <p class="text-lg">najamhd037@gmail.com</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <i class="text-green-400 fa-solid fa-map-marker-alt"></i>
+                            <p class="text-lg">49, Masjid Mawatha, Warakapola, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="flex flex-col items-center mt-10">
+                    <form action="mailto:najamhd037@gmail.com" method="post" enctype="text/plain" class="flex flex-col w-full gap-4 px-4 py-8 text-black bg-gray-800 rounded-lg shadow-lg md:w-1/2">
+                        <input type="text" name="name" placeholder="Your Name" class="py-3 text-center rounded-md focus:ring-2 focus:ring-green-400"/>
+                        <input type="email" name="email" placeholder="Your Email" class="py-3 text-center rounded-md focus:ring-2 focus:ring-green-400"/>
+                        <textarea name="message" placeholder="Your Message" class="py-3 text-center rounded-md focus:ring-2 focus:ring-green-400"></textarea>
+                        <button type="submit" class="px-6 py-3 font-medium text-white bg-green-400 rounded-md">Send</button>
+                    </form>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex flex-col items-center gap-4 py-8">
+                    <p class="font-semibold text-transform">Connect With Me</p>
+                    <ul class="flex justify-center gap-6 px-4 py-3">
+                        <li><a href="https://x.com/NajathM65968525?t=4rdPjARp4KbSgh4pnUFlZQ&s=08"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/najath.mohamed.752?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/najathmhd_?igsh=YTNqNDNvdHl0eW4w"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/Najathmhd"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+        });
+
+        ScrollReveal().reveal('.text-transform', {
+            reset: true,
+            duration: 2600,
+            distance: '60px',
+            origin: 'bottom',
+            delay: 300
+        });
+
+        ScrollReveal().reveal('.text-center h1', {
+            reset: true,
+            duration: 2000,
+            distance: '50px',
+            origin: 'top',
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.text-center p', {
+            reset: true,
+            duration: 2000,
+            distance: '50px',
+            origin: 'bottom',
+            delay: 300
+        });
+
+        ScrollReveal().reveal('.flex-col form', {
+            reset: true,
+            duration: 2000,
+            distance: '50px',
+            origin: 'left',
+            delay: 400
+        });
+
+        
+
+        // Reveal the Contact Information section
+        ScrollReveal().reveal('.contact-info', {
+            reset: true,
+            duration: 2000,
+            distance: '50px',
+            origin: 'bottom',
+            delay: 400
+        });
+    </script>
+</body>
+</html>
